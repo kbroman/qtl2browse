@@ -25,6 +25,22 @@ File location (hidden).
 Use the genetics genome browser to browse QTL mapping results
 }
 \examples{
-# run qtl2
-# browse results
+\donttest{
+library(qtl2)
+recla <- read_cross2(paste0("https://raw.githubusercontent.com/rqtl/",
+                            "qtl2data/master/DO_Recla/recla.zip"))
+
+gmap <- insert_pseudomarkers(recla$gmap, step=0.2, stepwidth="max")
+pmap <- interp_map(gmap, recla$gmap, recla$pmap)
+pr <- calc_genoprob(recla, gmap, error_prob=0.002,
+                    map_function="c-f", cores=0)
+apr <- genoprob_to_alleleprob(pr)
+
+k <- calc_kinship(apr, "loco", cores=0)
+
+out <- scan1(apr, recla$pheno[,"HP_latency"], k, cores=0)
+
+library(qtl2browse)
+browse(out, pmap)
+}
 }
