@@ -2,3 +2,4 @@
 Makefile$
 ^\.travis\.yml$
 \.Rout$
+^TODO\.txt$
