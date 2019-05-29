@@ -14,9 +14,8 @@ Authors@R: c(person("Karl W", "Broman", role=c("aut", "cre"),
 Depends:
     R (>= 3.1.0)
 Imports:
+    utils,
     jsonlite (>= 0.9.17),
-    utils
-Suggests:
     qtl2 (>= 0.18)
 License: GPL-3
 URL: https://github.com/rqtl/qtl2browse, https://kbroman.org/qtl2
