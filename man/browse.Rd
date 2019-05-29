@@ -4,16 +4,21 @@
 \alias{browse}
 \title{Browse QTL results}
 \usage{
-browse(scan1output, map, lodcolumn = 1, dir = NULL)
+browse(scan1output, map, lodcolumn = 1, min_lod = 0, dir = NULL)
 }
 \arguments{
 \item{scan1output}{Genome scan output, as from \code{\link[qtl2:scan1]{qtl2::scan1()}}}
 
-\item{map}{Corresponding physical map, as a list of chromosomes
-that are each a vector of marker positions.}
+\item{map}{Corresponding physical map (in Mbp), as a list of
+chromosomes that are each a vector of marker positions. Can
+also be a data frame of SNP information, with columns \code{chr},
+\code{pos}, and \code{snp_id}.}
 
 \item{lodcolumn}{LOD score column to plot (a numeric index, or a
 character string for a column name). Only one value allowed.}
+
+\item{min_lod}{Minimum LOD score to show; values below this are
+omitted.}
 
 \item{dir}{Optional directory to contain the results. If not
 provided, a temporary directory is created.}

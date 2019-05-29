@@ -3,10 +3,14 @@
 #' Use the genetics genome browser to browse QTL mapping results
 #'
 #' @param scan1output Genome scan output, as from [qtl2::scan1()]
-#' @param map Corresponding physical map, as a list of chromosomes
-#'     that are each a vector of marker positions.
+#' @param map Corresponding physical map (in Mbp), as a list of
+#'     chromosomes that are each a vector of marker positions. Can
+#'     also be a data frame of SNP information, with columns `chr`,
+#'     `pos`, and `snp_id`.
 #' @param lodcolumn LOD score column to plot (a numeric index, or a
-#' character string for a column name). Only one value allowed.
+#'     character string for a column name). Only one value allowed.
+#' @param min_lod Minimum LOD score to show; values below this are
+#'     omitted.
 #' @param dir Optional directory to contain the results. If not
 #'     provided, a temporary directory is created.
 #'
@@ -37,10 +41,18 @@
 #' browse(out, pmap)
 #' }
 browse <-
-    function(scan1output, map, lodcolumn=1, dir=NULL)
+    function(scan1output, map, lodcolumn=1, min_lod=0, dir=NULL)
 {
     if(is.null(map)) stop("map is NULL")
-    if(!is.list(map)) map <- list(" "=map) # if a vector, treat it as a list with no names
+    if(is.data.frame(map)) { # snpinfo, turn into map
+        chr <- factor(map$chr, unique(map$chr))
+        marnam <- split(map$snp_id, chr)
+        map <- split(map$pos, chr)
+        for(i in seq_along(map)) names(map[[i]]) <- marnam[[i]]
+    }
+
+    # threshold the LODs
+    scan1output <- scan1output[scan1output > min_lod,,drop=FALSE]
 
     # align scan1 output and map
     tmp <- qtl2::align_scan1_map(scan1output, map)
