@@ -1,0 +1,29 @@
+Package: qtl2browse
+Version: 0.1-1
+Date: 2019-05-28
+Title: Genetics Genome Browser
+Description: Plot genome scan results with the Genetics Genome
+    Browser: fast, lightweight, powered by purescript.
+Author: Karl W Broman [aut, cre] (<https://orcid.org/0000-0002-4914-6671>),
+    Christian Fischer [aut]
+Maintainer: Karl W Broman <broman@wisc.edu>
+Authors@R: c(person("Karl W", "Broman", role=c("aut", "cre"),
+             email="broman@wisc.edu", comment=c(ORCID =
+             "0000-0002-4914-6671")),
+             person("Christian", "Fischer", role="aut"))
+Depends:
+    R (>= 3.1.0)
+Imports:
+    jsonlite (>= 0.9.17),
+    utils
+Suggests:
+    qtl2 (>= 0.18)
+License: GPL-3
+URL: https://github.com/rqtl/qtl2browse, https://kbroman.org/qtl2
+BugReports: https://github.com/rqtl/qtl2browse/issues
+LazyData: true
+Encoding: UTF-8
+ByteCompile: true
+RoxygenNote: 6.1.1
+Roxygen: list(markdown=TRUE)
+Remotes: rqtl/qtl2
