@@ -18,7 +18,7 @@ First, install [R/qtl2](https://kbroman.org/qtl2) and
 
 ```r
 install.packages("devtools")
-install.packages("qtl2", repos="http://rqtl.org/qtl2cran")
+install.packages("qtl2", repos="https://rqtl.org/qtl2cran")
 ```
 
 Then use `devtools::install_github()` to install R/qtl2browse:
