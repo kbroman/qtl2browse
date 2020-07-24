@@ -23,7 +23,7 @@ Install [R/qtl2browse](https://github.com/rqtl/qtl2browse) from GitHub
 using [devtools](https://devtools.r-lib.org).
 
 ```r
-install_github("rqtl/qtl2browse")
+devtools::install_github("rqtl/qtl2browse")
 ```
 
 
