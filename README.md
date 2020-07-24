@@ -13,19 +13,19 @@ Browser](https://github.com/chfi/purescript-genetics-browser) with
 
 ## Installation
 
-First, install [R/qtl2](https://kbroman.org/qtl2) and
-[devtools](https://github.com/r-lib/devtools):
+Iinstall the package dependencies from [CRAN](https://cran.r-project.org).
 
 ```r
-install.packages("devtools")
-install.packages("qtl2", repos="https://rqtl.org/qtl2cran")
+install.packages(c("qtl2", "devtools"))
 ```
 
-Then use `devtools::install_github()` to install R/qtl2browse:
+Install [R/qtl2browse](https://github.com/rqtl/qtl2browse) from GitHub
+using [devtools](https://devtools.r-lib.org).
 
 ```r
-devtools::install_github("rqtl/qtl2browse")
+install_github("rqtl/qtl2browse")
 ```
+
 
 ---
 
