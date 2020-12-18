@@ -1,6 +1,6 @@
 ### R/qtl2browse
 
-[![Build Status](https://travis-ci.org/rqtl/qtl2browse.svg?branch=master)](https://travis-ci.org/rqtl/qtl2browse)
+[![R-CMD-check](https://github.com/rqtl/qtl2browse/workflows/R-CMD-check/badge.svg)](https://github.com/rqtl/qtl2browse/actions)
 
 [Karl Broman](https://kbroman.org) and [Christian Fischer](https://github.com/chfi)
 

@@ -1,5 +1,5 @@
 ^LICENSE\.md$
 Makefile$
-^\.travis\.yml$
 \.Rout$
 ^TODO\.txt$
+^\.github$
