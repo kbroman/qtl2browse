@@ -13,17 +13,17 @@ Browser](https://github.com/chfi/purescript-genetics-browser) with
 
 ## Installation
 
-Iinstall the package dependencies from [CRAN](https://cran.r-project.org).
+Install the package [remotes](https://remotes.r-lib.org).
 
 ```r
-install.packages(c("qtl2", "devtools"))
+install.packages("remotes")
 ```
 
 Install [R/qtl2browse](https://github.com/rqtl/qtl2browse) from GitHub
-using [devtools](https://devtools.r-lib.org).
+using `install_github`.
 
 ```r
-devtools::install_github("rqtl/qtl2browse")
+remotes::install_github("rqtl/qtl2browse")
 ```
 
 
