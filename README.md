@@ -8,7 +8,7 @@
 [R/qtl2browse](https://github.com/rqtl/qtl2browse) is an R package
 to facilitate the use of the [Genetics Genome
 Browser](https://github.com/chfi/purescript-genetics-browser) with
-[R/qtl2](https://kbroman.org/qtl2).
+[R/qtl2](https://kbroman.org/qtl2/).
 
 ---
 
