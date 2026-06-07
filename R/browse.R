@@ -63,7 +63,7 @@ browse <-
     if(is.null(dir)) {
         # create a randomized directory name
         while(dir.exists(dir <- file.path(tempdir(),
-             paste0("qtl2_", paste0(sample(letters, 6, repl=TRUE), collapse=""))))) {}
+             paste0("qtl2_", paste0(sample(letters, 6, replace=TRUE), collapse=""))))) {}
     }
     if(!dir.exists(dir)) {
         dir.create(dir)
