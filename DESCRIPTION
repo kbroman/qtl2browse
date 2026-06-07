@@ -1,6 +1,6 @@
 Package: qtl2browse
-Version: 0.1-1
-Date: 2019-05-28
+Version: 0.1-2
+Date: 2026-06-07
 Title: Genetics Genome Browser
 Description: Plot genome scan results with the Genetics Genome
     Browser: fast, lightweight, powered by purescript.

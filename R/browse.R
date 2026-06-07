@@ -17,7 +17,7 @@
 #' @return File location (hidden).
 #'
 #' @export
-#' @importFrom utils unzip
+#' @importFrom utils unzip browseURL
 #' @importFrom qtl2 align_scan1_map
 #' @importFrom jsonlite toJSON
 #'
