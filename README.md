@@ -41,8 +41,8 @@ genome scan output from `qtl2::scan1()`, writes it to a JSON file, and
 opens it in a web browser.
 
 Here's an example using data from [Recla et al.
-(2014)](https://www.ncbi.nlm.nih.gov/pubmed/24700285) and [Logan et
-al. (2013)](https://www.ncbi.nlm.nih.gov/pubmed/23433259). The
+(2014)](https://doi.org/10.1007/s00335-014-9508-0) and [Logan et
+al. (2013)](https://doi.org/10.1111/gbb.12029). The
 calculations are a bit slow.
 
 ```r
@@ -53,12 +53,12 @@ recla <- read_cross2(paste0("https://raw.githubusercontent.com/rqtl/",
 gmap <- insert_pseudomarkers(recla$gmap, step=0.2, stepwidth="max")
 pmap <- interp_map(gmap, recla$gmap, recla$pmap)
 pr <- calc_genoprob(recla, gmap, error_prob=0.002,
-                    map_function="c-f", cores=0)
+                    map_function="c-f", cores=4)
 apr <- genoprob_to_alleleprob(pr)
 
-k <- calc_kinship(apr, "loco", cores=0)
+k <- calc_kinship(apr, "loco", cores=4)
 
-out <- scan1(apr, recla$pheno[,"HP_latency"], k, cores=0)
+out <- scan1(apr, recla$pheno[,"HP_latency"], k, cores=4)
 
 library(qtl2browse)
 browse(out, pmap)
