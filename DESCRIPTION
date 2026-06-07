@@ -23,6 +23,6 @@ BugReports: https://github.com/rqtl/qtl2browse/issues
 LazyData: true
 Encoding: UTF-8
 ByteCompile: true
-RoxygenNote: 6.1.1
 Roxygen: list(markdown=TRUE)
 Remotes: rqtl/qtl2
+Config/roxygen2/version: 8.0.0
