@@ -30,7 +30,7 @@ File location (hidden).
 Use the genetics genome browser to browse QTL mapping results
 }
 \examples{
-\donttest{
+\dontrun{
 library(qtl2)
 recla <- read_cross2(paste0("https://raw.githubusercontent.com/rqtl/",
                             "qtl2data/master/DO_Recla/recla.zip"))
