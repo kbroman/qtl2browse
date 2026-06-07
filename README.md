@@ -1,10 +1,11 @@
 ### R/qtl2browse
 
 [![R-CMD-check](https://github.com/rqtl/qtl2browse/workflows/R-CMD-check/badge.svg)](https://github.com/rqtl/qtl2browse/actions)
+[![r-universe badge](https://rqtl.r-universe.dev/qtl2bioc/badges/version)](https://rqtl.r-universe.dev/qtl2bioc)
 
 [Karl Broman](https://kbroman.org) and [Christian Fischer](https://github.com/chfi)
 
-[R/qtl2browse](https://github.com/kbroman/qtl2browse) is an R package
+[R/qtl2browse](https://github.com/rqtl/qtl2browse) is an R package
 to facilitate the use of the [Genetics Genome
 Browser](https://github.com/chfi/purescript-genetics-browser) with
 [R/qtl2](https://kbroman.org/qtl2).
@@ -13,19 +14,23 @@ Browser](https://github.com/chfi/purescript-genetics-browser) with
 
 ## Installation
 
-Install the package [remotes](https://remotes.r-lib.org).
+Install R/qtl2browse from
+[r-universe](https://rqtl.r-universe.dev/qtl2browse):
+
+```r
+install.packages("qtl2browse", repos=c("https://rqtl.r-universe.dev",
+                                       "https://cloud.r-project.org"))
+```
+
+Alternatively, install the [remotes package](https://remotes.r-lib.org)
+and use `remotes::install_github()` to install R/qtl2browse from its
+[Github repository](https://github.com/rqtl/qtl2browse).
 
 ```r
 install.packages("remotes")
+library(remotes)
+install_github("rqtl/qtl2browse")
 ```
-
-Install [R/qtl2browse](https://github.com/rqtl/qtl2browse) from GitHub
-using `install_github`.
-
-```r
-remotes::install_github("rqtl/qtl2browse")
-```
-
 
 ---
 
@@ -63,6 +68,6 @@ browse(out, pmap)
 
 ## License
 
-[R/qtl2browse](https://github.com/kbroman/qtl2browse) is released
+[R/qtl2browse](https://github.com/rqtl/qtl2browse) is released
 under the [MIT license](LICENSE.md), as is the [Genetics Genome
 Browser](https://github.com/chfi/purescript-genetics-browser).
